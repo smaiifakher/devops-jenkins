@@ -18,5 +18,12 @@ pipeline {
                 }
             }
         }
+         stage('Test') {
+             steps{
+                script{
+                    sh "npm run test"
+                }
+            }
+        }
     }
 }
