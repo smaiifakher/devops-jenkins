@@ -18,10 +18,24 @@ pipeline {
                 }
             }
         }
+        stage('Version') {
+            steps{
+                script{
+                    sh "ng version"
+                }
+            }
+        }
          stage('Test') {
              steps{
                 script{
-                    sh "npm run test"
+                    sh "ng test"
+                }
+            }
+        }
+        stage('Serve') {
+            steps{
+                script{
+                    sh "ng serve"
                 }
             }
         }
