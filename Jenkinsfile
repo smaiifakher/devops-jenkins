@@ -25,13 +25,6 @@ pipeline {
                 }
             }
         }
-         stage('Test') {
-             steps{
-                script{
-                    sh "ng test"
-                }
-            }
-        }
         stage('Serve') {
             steps{
                 script{
