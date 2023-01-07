@@ -25,6 +25,11 @@ pipeline {
                 }
             }
         }
+        stage ('code quality'){
+            steps{
+                sh 'ng lint'
+            }
+        }
         stage('Test') {
             steps{
                 script{
