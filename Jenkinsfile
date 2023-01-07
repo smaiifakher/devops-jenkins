@@ -33,14 +33,14 @@ pipeline {
         stage('Test') {
             steps{
                 script{
-                    sh "npm run test --watch=false"
+                    sh "ng test --watch=false"
                 }
             }
         }
         stage('Serve') {
             steps{
                 script{
-                    sh "ng build --prod"
+                    sh "ng serve --open"
                 }
             }
         }
