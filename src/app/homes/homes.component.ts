@@ -25,10 +25,7 @@ export class HomesComponent implements OnInit {
       const homeTypeFilters = params['home-type'] || [];
       this.dataService.loadHomes(homeTypeFilters);
       this.currentHomeTypeFilters = homeTypeFilters;
-      
     });
-
-    
   }
 
   homeTypeFilterApplied($event) {
