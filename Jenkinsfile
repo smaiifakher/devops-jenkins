@@ -28,14 +28,14 @@ pipeline {
         stage('Test') {
             steps{
                 script{
-                    sh "ng test --watch=false --browsers=ChromeHeadlessNoSandbox && echo 'hello'"
+                    sh "npm run test --watch=false"
                 }
             }
         }
         stage('Serve') {
             steps{
                 script{
-                    sh "ng serve"
+                    sh "ng build --prod"
                 }
             }
         }
