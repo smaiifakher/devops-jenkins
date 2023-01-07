@@ -33,7 +33,7 @@ pipeline {
         stage('Test') {
             steps{
                 script{
-                    sh "ng test --watch=false"
+                    sh "ng test"
                 }
             }
         }
