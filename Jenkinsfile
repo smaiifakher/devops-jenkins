@@ -25,6 +25,13 @@ pipeline {
                 }
             }
         }
+        stage('Test') {
+            steps{
+                script{
+                    sh "ng test --watch=false --browsers=ChromeHeadlessNoSandbox && echo 'hello'"
+                }
+            }
+        }
         stage('Serve') {
             steps{
                 script{
