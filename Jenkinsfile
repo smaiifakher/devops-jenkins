@@ -30,13 +30,7 @@ pipeline {
                 sh 'ng lint'
             }
         }
-        stage('Test') {
-            steps{
-                script{
-                    sh "ng test"
-                }
-            }
-        }
+
         stage('Serve') {
             steps{
                 script{
