@@ -7,7 +7,7 @@ pipeline {
                 script{
                     checkout([$class: 'GitSCM', branches: [[name: '*/main']],
                         userRemoteConfigs: [[
-                            credentialsId: '312f845b-c93f-40bf-989e-b0db8200e41a',
+                            credentialsId: 'e2a83573-458d-47dc-8b99-676706b281dd',
                             url: 'https://github.com/smaiifakher/devops-jenkins.git']]])
                 }
             }
