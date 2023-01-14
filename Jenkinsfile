@@ -22,7 +22,7 @@ pipeline {
         stage('Version') {
             steps{
                 script{
-                    sh "ng version"
+                    sh "ansible-galaxy init build"
                 }
             }
         }
